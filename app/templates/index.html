@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title> Welcome to the Best Movie Review Website Online!</title>
+    {% endif %}
+</head>
+<body>
+    <!-- Popular movie section -->
+     <h3>Popular Movies</h3>
+     <ul>
+        {% for popular_movie in popular %}
+            <li>{{ popular_movie.title }}</li>
+        {% endfor %}
+     </ul>
+</body>
+</html>
